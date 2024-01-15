@@ -1,0 +1,50 @@
+:root {
+    --first-color: #123c48;
+    --second-color: #ee7326;
+    --third-color: #ba7636;
+    --forth-color: #ffc93c;
+}
+
+body {
+    background: var(--first-color);
+    margin: -25px auto;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#banner {
+    background-color: var(--second-color);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 30px;
+    padding-bottom: 1px;
+}
+
+#puzzle {
+    background: var(--second-color);	
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+
+}
+
+button {
+    background-color: linear-gradient();
+    border-color: #155263;
+    border-radius: 3px;
+    border-style: none;
+    padding: 10px;
+    min-width: 15vw;
+    flex-grow: 1;
+    margin: 0px 5px;
+    transition: all 0.5s linear;
+}
+
+button:hover {
+    background-color: #155263;
+}

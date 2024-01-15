@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tresor.css">
+</head>
+<body>
+    <iframe scrolling="no" width="500" height="500" srcdoc='
+    <style>
+      p {
+          color:rgba(240, 248, 255, 1000);
+      }
+      .image1 {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+        .image2 {
+          position: absolute;
+          top: 10px;
+          left: 7px;
+        }
+        button {
+          display: inline;
+          margin-top: 15px;
+          margin-left: 10px;
+          border-radius: 10px;
+          background-color: rgb(155, 145, 131);
+          color: rgb(255, 255, 255);
+          font-size: 30px;
+          padding: 5px;
+          width: 35%;
+        }
+        
+  </style>
+  <img class="image1" id="image" src="https://asg-passau.de/wp-content/uploads/2024/01/schloss_innen.png" width="300"/>
+  <img class="image2" id="image" src="https://asg-passau.de/wp-content/uploads/2024/01/schloss_aussen.png" width="300"/>
+  <script>
+      angles = 0;
+      // the addeventlistener click function of the button elements
+      function rotateMyImg(increment) {
+         angles = angles + increment;
+         if (angles>=360)
+            angles = 360-angles;
+         if (angles<0)
+           angles = 360 + angles;
+         // get the image element
+         var img = document.getElementById("image");
+         img.style.transform = `rotate(${angles}deg)`;
+  
+         var rotation = document.getElementById("image").style.rotate
+         document.getElementById("password").style.color = "rgb(240, 248, 255)"
+      }
+  </script>
+  <br>
+  <button id="button-right" onClick="rotateMyImg(20)">Nach rechts drehen</button><br>
+  <button id="button-left" onClick="rotateMyImg(-20)"> Nach links drehen</button>
+  <p id="password">Das Lösungswort ist 1234</p>
+    '></iframe>
+
+</body>
+</html>
